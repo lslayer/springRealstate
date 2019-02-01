@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>All tasks</title>
+</head>
+<body>
+
+<a href="./items">Items</a>
+<a href="./addItem">items-add</a>
+<a href="./task">Task</a>
+<a href="./addTask">Task-add</a>
+
+
+<h1>Объекты недвижимости</h1>
+
+<div class="container">
+    <div class="starter-template">
+        <table>
+            <thead>
+            <tr>
+                <th>User</th>
+                <th>Tasks</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--<tr th:if="${tasks.empty}">
+                <td colspan="2"> No Tasks Available </td>
+            </tr>-->
+            <tr th:each="item : ${items}">
+                <td><span th:text="${item.getItmeId()}"> ItmeId </span></td>
+                <td><span th:text="${item.getAddress()}"> Address </span></td>
+                <td><span th:text="${item.getDescription()}"> Description </span></td>
+                <td><span th:text="${item.getSqure()}"> Squre </span></td>
+                <td><span th:text="${item.getPrice()}"> getPrice </span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>

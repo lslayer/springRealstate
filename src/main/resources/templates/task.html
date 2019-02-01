@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>All tasks</title>
+</head>
+<body>
+
+<a href="./items">Items</a>
+<a href="./addItem">items-add</a>
+<a href="./task">Task</a>
+<a href="./addTask">Task-add</a>
+
+
+<h1>All tasks (тестовые задачи)</h1>
+
+
+<div class="container">
+    <div class="starter-template">
+        <table>
+            <thead>
+            <tr>
+                <th>User</th>
+                <th>Tasks</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--<tr th:if="${tasks.empty}">
+                <td colspan="2"> No Tasks Available </td>
+            </tr>-->
+            <tr th:each="task : ${tasks}">
+                <td><span th:text="${task.getUser()}"> User </span></td>
+                <td><span th:text="${task.getDescription()}"> Task </span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>

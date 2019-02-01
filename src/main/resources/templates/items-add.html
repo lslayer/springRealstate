@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <title>Task list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+
+</head>
+<body>
+
+<a href="./items">Items</a>
+<a href="./addItem">items-add</a>
+<a href="./task">Task</a>
+<a href="./addTask">Task-add</a>
+
+
+<h1>Добавить объекты недвижимости</h1>
+
+
+<div class="container">
+    <form action="#" th:action="@{/addItem}" th:object="${item}" method="post">
+        <p>itmeId: <input th:field="${item.itmeId}"/></p>
+        <p>address: <input th:field="${item.address}"/></p>
+        <p>description: <input th:field="${item.description}"/></p>
+        <p>squre: <input th:field="${item.squre}"/></p>
+        <p>price: <input th:field="${item.price}"/></p>
+
+        <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+    </form>
+</div>
+<!-- /.container -->
+
+
+</body>
+</html>
