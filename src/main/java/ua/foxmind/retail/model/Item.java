@@ -1,21 +1,21 @@
 package ua.foxmind.retail.model;
 
+import org.springframework.data.annotation.Id;
+import javax.persistence.*;
+
+
 public class Item {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     int itmeId;
-    String address;
     String description;
-    int squre;
-    int price;
 
     public Item() {
     }
 
-    public Item(int itmeId, String address, String description, int squre, int price) {
-        this.itmeId = itmeId;
-        this.address = address;
+    public Item(String description) {
         this.description = description;
-        this.squre = squre;
-        this.price = price;
     }
 
     public int getItmeId() {
@@ -26,14 +26,6 @@ public class Item {
         this.itmeId = itmeId;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -42,24 +34,9 @@ public class Item {
         this.description = description;
     }
 
-    public int getSqure() {
-        return squre;
-    }
-
-    public void setSqure(int squre) {
-        this.squre = squre;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
     @Override
     public String toString() {
-        return String.format("Item: {itmeId: %s, address: %s, description: %s. squre: %s, price: %s}", itmeId, address, description, squre, price);
+        return String.format("Item: {itmeId: %s, description: %s}", itmeId, description);
     }
+
 }

@@ -19,11 +19,8 @@
         <table>
             <thead>
             <tr>
-                <th>User</th>
-                <th>Tasks</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
+                <th>ItmeId</th>
+                <th>Description</th>
             </tr>
             </thead>
             <tbody>
@@ -32,10 +29,7 @@
             </tr>-->
             <tr th:each="item : ${items}">
                 <td><span th:text="${item.getItmeId()}"> ItmeId </span></td>
-                <td><span th:text="${item.getAddress()}"> Address </span></td>
                 <td><span th:text="${item.getDescription()}"> Description </span></td>
-                <td><span th:text="${item.getSqure()}"> Squre </span></td>
-                <td><span th:text="${item.getPrice()}"> getPrice </span></td>
             </tr>
             </tbody>
         </table>
