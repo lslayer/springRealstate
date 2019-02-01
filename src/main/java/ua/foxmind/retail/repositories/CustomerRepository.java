@@ -5,5 +5,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import ua.foxmind.retail.model.Customer;
 
 @RepositoryRestResource(collectionResourceRel = "customers", path = "customer")
-public interface CustomerRepository extends MongoRepository<Customer, Long> {
+public interface CustomerRepository extends MongoRepository<Customer, String> {
 }
