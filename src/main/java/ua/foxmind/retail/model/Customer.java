@@ -3,22 +3,17 @@ package ua.foxmind.retail.model;
 
 
 import org.springframework.data.annotation.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToMany;
 import java.util.HashSet;
 import java.util.Set;
 
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     int userId;
     String userName;
     String phoneNum;
 
     // Вот здесь я конечно не уверен как писать: Каждый клиент может создавать много запросов на разные items
-    @ManyToMany(mappedBy = "items")
     private Set<Item> items  = new HashSet<>();
 
     public Customer() {

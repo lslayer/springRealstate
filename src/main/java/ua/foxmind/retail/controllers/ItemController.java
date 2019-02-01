@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.view.RedirectView;
 import ua.foxmind.retail.model.Item;
-import ua.foxmind.retail.model.Task;
 import ua.foxmind.retail.repositories.ItemRepository;
-import ua.foxmind.retail.repositories.TaskRepository;
 
 import java.util.List;
 import java.util.Map;
@@ -20,6 +18,7 @@ import java.util.Map;
 public class ItemController {
 
     @Autowired
+    private
     ItemRepository itemRepository;
 
     @RequestMapping("/items")

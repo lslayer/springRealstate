@@ -21,7 +21,7 @@ public class CustomerController {
     @Autowired
     CustomerRepository customerRepository;
 
-    @RequestMapping("/customer")
+    @RequestMapping("/customers")
     public String itemsList(Map<String, Object> model) {
         List<Customer> allItems = customerRepository.findAll();
         model.put("customers", allItems);
